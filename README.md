@@ -1,8 +1,5 @@
-# Ionic 3 Starter Template
+# Deel Task
 
-This template is the tabs-starter with some additional work. It contains a set of different custom components and a simple http call to a JSON file.
-Furthermore, it has search implemented with a loader that shows up before the data has been rendered.
-There is no platform specific styling on any component other than the basic differences implemented in Ionic 3.
 
 ## Getting Started
 
