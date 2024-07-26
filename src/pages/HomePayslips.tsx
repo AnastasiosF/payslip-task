@@ -1,6 +1,6 @@
-import MessageListItem from '../components/MessageListItem';
+import PayslipItem from '../components/PayslipItem';
 import { useState } from 'react';
-import { Message, getMessages } from '../data/messages';
+import { data} from '../data/MockData';
 import {
   IonContent,
   IonHeader,
@@ -12,15 +12,16 @@ import {
   IonToolbar,
   useIonViewWillEnter
 } from '@ionic/react';
-import './Home.css';
+import './HomePayslips.css';
+import {Payslip} from "../data/Models";
 
-const Home: React.FC = () => {
+const HomePayslips: React.FC = () => {
 
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [payslips, setPayslips] = useState<Payslip[]>([]);
 
   useIonViewWillEnter(() => {
-    const msgs = getMessages();
-    setMessages(msgs);
+    const payslips1 = data;
+    setPayslips([...payslips1]);
   });
 
   const refresh = (e: CustomEvent) => {
@@ -33,7 +34,7 @@ const Home: React.FC = () => {
     <IonPage id="home-page">
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Inbox</IonTitle>
+          <IonTitle>Deel Payslips</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
@@ -44,17 +45,17 @@ const Home: React.FC = () => {
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">
-              Inbox
+              Deel Payslips
             </IonTitle>
           </IonToolbar>
         </IonHeader>
 
         <IonList>
-          {messages.map(m => <MessageListItem key={m.id} message={m} />)}
+          {payslips.map(m => <PayslipItem key={m.id} payslip={m} />)}
         </IonList>
       </IonContent>
     </IonPage>
   );
 };
 
-export default Home;
+export default HomePayslips;

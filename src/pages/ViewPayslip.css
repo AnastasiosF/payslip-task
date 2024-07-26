@@ -1,16 +1,19 @@
-#view-message-page ion-item {
+#view-payslip-page ion-item {
   --inner-padding-end: 0;
   --background: transparent;
+  --padding-start: 8;
+  --inner-padding-start: 8;
+  padding-left: 8px;
 }
 
-#view-message-page ion-label {
+#view-payslip-page ion-label {
   margin-top: 12px;
   margin-bottom: 12px;
 }
 
-#view-message-page ion-item h2 {
+#view-payslip-page ion-item h2 {
   font-weight: 600;
-  
+
   /**
    * With larger font scales
    * the date/time should wrap to the next
@@ -23,28 +26,28 @@
   justify-content: space-between;
 }
 
-#view-message-page ion-item .date {
+#view-payslip-page ion-item .date {
   align-items: center;
   display: flex;
 }
 
-#view-message-page ion-item ion-icon {
+#view-payslip-page ion-item ion-icon {
   font-size: 42px;
   margin-right: 8px;
 }
 
-#view-message-page ion-item ion-note {
+#view-payslip-page ion-item ion-note {
   font-size: 0.9375rem;
   margin-right: 12px;
   font-weight: normal;
 }
 
-#view-message-page h1 {
+#view-payslip-page h1 {
   margin: 0;
   font-weight: bold;
   font-size: 1.4rem;
 }
 
-#view-message-page p {
+#view-payslip-page p {
   line-height: 1.4;
 }
